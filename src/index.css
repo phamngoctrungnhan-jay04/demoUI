@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-sans: 'Be Vietnam Pro', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+
+  --color-ink: #151821;
+  --color-cream: #f7f5ef;
+  --color-neon: #d4ff3f;
+  --color-magenta: #ff2e93;
+  --color-cyan: #2ff3e0;
+}
+
+@layer base {
+  body {
+    @apply bg-cream text-ink font-sans;
+  }
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-viewport {
+  mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 16px;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  animation: scroll-left 36s linear infinite;
+}
+
+.marquee-track:has(.tag-pill:hover) {
+  animation-play-state: paused;
+}

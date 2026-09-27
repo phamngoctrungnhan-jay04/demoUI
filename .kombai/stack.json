@@ -1,0 +1,14 @@
+// Kombai Tech Stack Configuration
+// Each value must be a string or an array of strings.
+// Example: "Framework": "Vite" or "Project Type": ["React", "Vue"]
+{
+  "Router": "React Router v7 (declarative mode)",
+  "Icon Set": "Lucide React",
+  "React Version": "19",
+  "TS/JS": "TS",
+  "Tailwind Version": "v4",
+  "Component Library": "shadcn v4 (Radix UI)",
+  "Build Tool": "Vite",
+  "Framework": "Vite",
+  "Project Type": "React"
+}
